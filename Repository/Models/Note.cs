@@ -24,8 +24,4 @@ public partial class Note
 
     [StringLength(50)]
     public string IssueId { get; set; } = null!;
-
-    [ForeignKey("IssueId")]
-    [InverseProperty("Notes")]
-    public virtual Issue Issue { get; set; } = null!;
 }

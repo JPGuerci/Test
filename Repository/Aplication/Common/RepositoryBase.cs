@@ -70,9 +70,9 @@ namespace Repository.Aplication.Common
             return await query.ToListAsync();
         }
 
-        public Task<T> GetByIdAsync(int id)
+        public  T GetByIdAsync(object id)
         {
-            throw new NotImplementedException();
+            return  _context.Set<T>().Find(id)!;
         }
 
         public async Task<T> UpdateAsync(T entity)

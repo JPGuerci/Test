@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository.Models;
 
@@ -13,15 +15,22 @@ public partial class TestDbContext : DbContext
     {
     }
 
+    public virtual DbSet<Area> Areas { get; set; }
+
     public virtual DbSet<Issue> Issues { get; set; }
 
     public virtual DbSet<Note> Notes { get; set; }
 
     public virtual DbSet<StatusIssue> StatusIssues { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Issue>(entity =>
         {
+            entity.HasOne(d => d.Area).WithMany(p => p.Issues)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Incidencia_Area");
+
             entity.HasOne(d => d.Status).WithMany(p => p.Issues)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Incidencia_EstadoIncidencia");
@@ -30,10 +39,6 @@ public partial class TestDbContext : DbContext
         modelBuilder.Entity<Note>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_Nota");
-
-            entity.HasOne(d => d.Issue).WithMany(p => p.Notes)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Nota_Incidencia");
         });
 
         OnModelCreatingPartial(modelBuilder);

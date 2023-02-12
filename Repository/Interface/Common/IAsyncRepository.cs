@@ -15,7 +15,7 @@ namespace Repository.Interface.Common
                                         Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
                                         List<Expression<Func<T, object>>> includes = null,
                                         bool disableTracking = true);
-        Task<T> GetByIdAsync(int id);
+        T GetByIdAsync(object id);
         Task<T> AddAsync(T entity);
         Task<T> UpdateAsync(T entity);
         Task DeleteAsync(T entity);
