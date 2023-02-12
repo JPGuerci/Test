@@ -1,0 +1,12 @@
+C:\Users\front\source\repos\Test\IssueService\bin\Debug\net6.0\IncidenciaService.deps.json
+C:\Users\front\source\repos\Test\IssueService\bin\Debug\net6.0\IncidenciaService.dll
+C:\Users\front\source\repos\Test\IssueService\bin\Debug\net6.0\IncidenciaService.pdb
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\IncidenciaService.csproj.AssemblyReference.cache
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\IncidenciaService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\IncidenciaService.AssemblyInfoInputs.cache
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\IncidenciaService.AssemblyInfo.cs
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\IncidenciaService.csproj.CoreCompileInputs.cache
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\IncidenciaService.dll
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\refint\IncidenciaService.dll
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\IncidenciaService.pdb
+C:\Users\front\source\repos\Test\IssueService\obj\Debug\net6.0\ref\IncidenciaService.dll
